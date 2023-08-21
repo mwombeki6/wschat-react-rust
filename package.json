@@ -4,10 +4,11 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "concurrently new \"vite\" \"cargo shuttle run --working-directory api\"",
-    "build": "tsc && vite build",
+    "dev": "concurrently new \"vite\" \"cargo shuttle run --working-directory api --port 9999\"",
+    "build": "tsc && vite build --emptyOutDir",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "npm run build && cargo shuttle deploy --working-directory ./api"
   },
   "dependencies": {
     "framer-motion": "^10.16.0",
