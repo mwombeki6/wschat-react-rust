@@ -1,0 +1,1 @@
+@import"https://fonts.googleapis.com/css2?family=Text+Me+One&display=swap";@tailwind base;@tailwind components;@tailwind utilities;@layer base{input,button{box-shadow:5px 5px #00000080}input:active,button:active{box-shadow:3px 3px #00000080}}body{font-family:Text Me One,"Sans Serif";padding:0;margin:0;background-color:#d6d3d1;box-sizing:box-border;overflow-x:hidden}
