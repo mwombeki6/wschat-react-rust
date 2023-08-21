@@ -4,10 +4,11 @@ use axum::{
         ws::{Message, WebSocket},
         Path, WebSocketUpgrade,
     },
-    http::StatusCode,
+    //http::StatusCode,
     response::IntoResponse,
     routing::get,
-    Extension, Router,
+    Extension,
+    Router,
 };
 use std::{collections::HashMap, path::PathBuf, sync::Arc};
 
@@ -144,6 +145,6 @@ async fn disconnect(my_id: usize, users: &Users) {
 }
 
 // handle internal server errors
-async fn handle_error(err: std::io::Error) -> impl IntoResponse {
-    (StatusCode::INTERNAL_SERVER_ERROR, format!("{:?}", err))
-}
+//async fn handle_error(err: std::io::Error) -> impl IntoResponse {
+//    (StatusCode::INTERNAL_SERVER_ERROR, format!("{:?}", err))
+//}
